@@ -16,7 +16,7 @@
   </modules>
 
   <properties>
-    <scala.version>2.9.1-1</scala.version>
+    <scala.version>2.9.2</scala.version>
   </properties>
 
   <dependencies>
@@ -57,10 +57,10 @@
             <arg>-unchecked</arg>
             <arg>-P:continuations:enable</arg>
           </args>
-          <jvmArgs>
-            <jvmArg>-Xms2048m</jvmArg>
-            <jvmArg>-Xmx2048m</jvmArg>
-          </jvmArgs>
+          <javacArgs>
+            <javacArg>-Xlint:unchecked</javacArg>
+            <javacArg>-Xlint:deprecation</javacArg>
+          </javacArgs>
           <charset>UTF-8</charset>
           <compilerPlugins>
               <compilerPlugin>
@@ -91,5 +91,16 @@
       </plugin>
     </plugins>
   </build>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>
