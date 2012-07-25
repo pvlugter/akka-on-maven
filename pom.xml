@@ -51,7 +51,7 @@
         </executions>
         <configuration>
           <recompileMode>incremental</recompileMode>
-          <!-- <residentCompilerLimit>1</residentCompilerLimit> -->
+          <!-- <useZincServer>true</useZincServer> -->
           <args>
             <arg>-deprecation</arg>
             <arg>-unchecked</arg>
@@ -61,6 +61,10 @@
             <javacArg>-Xlint:unchecked</javacArg>
             <javacArg>-Xlint:deprecation</javacArg>
           </javacArgs>
+          <jvmArgs>
+            <jvmArg>-Xms1536m</jvmArg>
+            <jvmArg>-Xmx1536m</jvmArg>
+          </jvmArgs>
           <charset>UTF-8</charset>
           <compilerPlugins>
               <compilerPlugin>
